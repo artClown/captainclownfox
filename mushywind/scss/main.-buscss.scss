@@ -1,0 +1,336 @@
+// @font-face {
+//     font-family:'univers-regular';src:url("https://www.business.hsbc.co.id/assets/PWS171/fonts/UniversNextforHSBCW02-Rg.eot?#iefix");src:url("https://www.business.hsbc.co.id/assets/PWS171/fonts/UniversNextforHSBCW02-Rg.eot?#iefix") format("eot"),url("https://www.business.hsbc.co.id/assets/PWS171/fonts/UniversNextforHSBCW02-Rg.woff") format("woff"),url("https://www.business.hsbc.co.id/assets/PWS171/fonts/UniversNextforHSBCW02-Rg.ttf") format("truetype"),url("https://www.business.hsbc.co.id/assets/PWS171/fonts/UniversNextforHSBCW02-Rg.svg#a7a08b81-ee91-4e2b-b0ac-2a87a44e0eda") format("svg");
+// }
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.7px;;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+
+.table-wrapper {
+    display: none;
+}
+
+ul, ol {
+    list-style-position: outside;
+    margin: 0;
+    padding: 2em;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+ul li, ol li {
+    padding-top: 5px;
+}
+
+.header-wrapper {    
+    margin: 0 auto;
+    background-color: #000;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100% !important;
+    z-index: 999;
+    // height: 35px;
+}
+
+.header--content {
+    margin: 0 auto;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    padding: 8px;
+}
+
+.header--content img {
+    width: 100% !important;
+}
+
+.progress {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    background: #fff;
+}
+
+.progress--item, .progress--content-bar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    // justify-content: center;
+    justify-content: space-around;
+    // font-size: 1rem;
+}
+
+
+.progress--bar-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 10px;
+}
+
+.progress--content-bar {
+    height: 5px;
+    display: flex;
+}
+
+.progress--bar-current {
+    background: #db1100;    
+}
+
+.progress--bar-remaining {
+    background: #ccc;
+}
+
+
+/* .progress--content-latest, .progress--bar-latest {
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+} */
+
+
+
+.form-container {
+    padding: 25px 10px 10px 10px;
+    max-width: 1200px;
+    width: 100% !important;
+    margin: 0 auto;
+}
+
+.content--banner {
+    display:flex;
+    align-items: center;
+}
+
+.content--banner-image {
+    // padding-bottom: 10px;
+    align-self: stretch;
+}
+
+.content--banner-text {
+    padding: 10px;
+    background-color: #3e505d;
+    color: #fff;
+    align-self: stretch;
+}
+
+.content--banner {
+    display:flex;
+    flex-wrap: wrap;
+    vertical-align: middle;
+}
+
+
+// show - hide on breakpoints
+.show-sm, .show-md, .show-lg, .show-xl {
+    display: none;
+}
+
+.hide-sm, .hide-md, .hide-lg, .hide-xl {
+    display: block;
+}
+
+@media (min-width: 420px) {
+    .show-sm {
+        display: block;
+    }
+    .hide-sm {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .content--banner-image {
+        padding-right: 20px;
+    }
+    .show-md {
+        display: block;
+    }
+    .hide-md {
+        display: none;
+    }
+}
+
+@media (min-width: 1024) {
+    .show-lg {
+        display: block;
+    }       
+    .hide-lg {
+        display: none;
+    }
+}
+
+@media (min-width: 1200) {
+    .show-xl {
+        display: block;
+    }   
+    .hide-xl {
+        display: none;
+    }    
+}
+
+.sectionHeader {
+    // border-left: 4px solid #db1100;
+    // text-align: left;
+    padding-left: 15px;
+    border-left: 5px solid transparent;
+    // font-style: normal;
+    // font-weight: 400;
+    color: #333;
+    // display: block;
+    // line-height: 1.4;
+    position: relative;
+}
+
+.sectionHeader::after {
+    right: auto;
+    left: -5px;
+    top: 0.3rem;
+    bottom: 0.3rem;
+    background: #db1100;
+    content: "";
+    display: block;
+    width: 5px;
+    position: absolute;
+}
+
+.redHighlight {
+    background-color: #db1100;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;;
+    padding: 3px;
+}   
+
+.content-wrapper, .content--form-wrapper {
+    width: 100%;
+}
+.content--form-wrapper {
+    padding-top: 35px;
+}
+
+.row {
+    padding-top: 20px;
+}
+
+.content--form-wrapper--block {
+    background-color: #ededed;
+    padding-top: 10px;
+    margin-top: 25px;
+    h2 {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        &::after {
+            content: none !important;
+        }
+    }
+
+}
+
+.form-group-wrapper {
+    display: flex;
+    padding: 10px;
+    // position: relative;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    padding: 10px 15px;
+    margin: 0;
+}
+
+.form-row {
+    float: left;
+    position: relative;
+}
+
+.help-inline {
+    display: none;
+    color: red;
+    line-height: 1.5;
+}
+
+input[type="text"] {
+    font-size: 1.3rem;
+    color: #000;
+    // width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+
+
+img {
+    width: 100%;
+    // height: 100%;
+}
+
+img.selectiveContent {
+    height: 100%;
+}
+
+:focus {
+    outline: none;
+}
+
+/* .inputText {
+    border: 0;
+    padding: 4px 0;
+    border-bottom: 1px solid #333;
+    background-color: transparent;
+}
+
+.inputText~.focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #1087ef;
+    transition: 0.4s;
+}
+
+.inputText:focus~.focus-border,
+.has-content.inputText~.focus-border {
+    width: 100%;
+    transition: 0.4s;
+    left: 0;
+}
+
+.inputText~label {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    color: #000;
+    transition: 0.5s;
+    z-index: -1;
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+}
+
+.inputText:focus~label,
+.has-content.inputText~label {
+    top: -16px;
+    font-size: 1.2rem;
+    color: #00647e;
+    transition: 0.3s;
+} */
