@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=PT+Sans&family=Roboto:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=PT+Sans&family=Roboto&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -21,6 +19,9 @@ html, body {
 
 .wd-100 {
   width: 100% !important;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .table-wrapper {
@@ -117,7 +118,7 @@ ul li, ol li {
   }
 }
 
-.quickFill {
+.quick-fill {
   display: block;
   visibility: visible;
   opacity: 1;
@@ -125,8 +126,8 @@ ul li, ol li {
   -o-transition: opacity 0.3s, visibility 0.3s;
   transition: opacity 0.3s, visibility 0.3s;
   position: fixed;
-  right: 25px;
-  bottom: 75px;
+  right: 0px;
+  bottom: 0px;
   background: rgba(219, 17, 0, 0.65);
   font-weight: bolder;
   border-radius: 5px;
@@ -134,16 +135,16 @@ ul li, ol li {
   padding: 5px;
 }
 
-.quickFill a {
+.quick-fill a {
   text-decoration: none;
   color: white;
 }
 
-.quickFill:hover {
+.quick-fill:hover {
   background: #db1100;
 }
 
-.qfToggle {
+.qf-toggle {
   display: none;
   visibility: hidden;
   opacity: 0;
@@ -269,11 +270,19 @@ ul li, ol li {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .content--banner .content--banner-image {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 @media (min-width: 1024px) {
@@ -283,12 +292,14 @@ ul li, ol li {
     padding-right: 20px;
   }
   .content--banner .content--banner-image img {
+    max-width: 100%;
     height: 100%;
   }
 }
 
 .content--banner .content--banner-text {
-  padding: 10px;
+  padding: 0 10px;
+  margin-top: 0;
   background-color: #3e505d;
   color: #fff;
   -ms-flex-preferred-size: 100%;
@@ -303,6 +314,65 @@ ul li, ol li {
 }
 
 .content--banner .content--banner-text h1, .content--banner .content--banner-text h2, .content--banner .content--banner-text p, .content--banner .content--banner-text span {
+  margin: 15px 5px;
+}
+
+.content--banner-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  vertical-align: middle;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.content--banner-left .content--banner-image {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 1024px) {
+  .content--banner-left .content--banner-image {
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+    padding-left: 20px;
+  }
+  .content--banner-left .content--banner-image img {
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+.content--banner-left .content--banner-text {
+  padding: 0 10px;
+  margin-top: 0;
+  background-color: #3e505d;
+  color: #fff;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+@media (min-width: 1024px) {
+  .content--banner-left .content--banner-text {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+}
+
+.content--banner-left .content--banner-text h1, .content--banner-left .content--banner-text h2, .content--banner-left .content--banner-text p, .content--banner-left .content--banner-text span {
   margin: 15px 5px;
 }
 
@@ -340,8 +410,8 @@ ul li, ol li {
   background: rgba(255, 255, 255, 0.95);
 }
 
-.content--banner-overlay .content--banner-text h2, .content--banner-overlay .content--banner-text p, .content--banner-overlay .content--banner-text span {
-  margin: 15px 15px;
+.content--banner-overlay .content--banner-text h1, .content--banner-overlay .content--banner-text h2, .content--banner-overlay .content--banner-text p, .content--banner-overlay .content--banner-text span {
+  margin: 10px 0px;
   color: black;
   font-weight: 300;
 }
@@ -363,28 +433,24 @@ ul li, ol li {
     padding: 5px;
     width: 35%;
   }
-  .content--banner-overlay .content--banner-text h2 {
-    margin: 15px 5px;
-    color: #333;
-  }
-  .content--banner-overlay .content--banner-text p, .content--banner-overlay .content--banner-text span {
+  .content--banner-overlay .content--banner-text h1, .content--banner-overlay .content--banner-text h2, .content--banner-overlay .content--banner-text p, .content--banner-overlay .content--banner-text span {
     margin: 15px 5px;
     color: #333;
   }
 }
 
-.sectionHeader {
+.section-header {
   padding-left: 15px;
   border-left: 5px solid transparent;
   color: #333;
   position: relative;
 }
 
-.sectionHeader::after {
+.section-header::after {
   right: auto;
   left: -5px;
-  top: 0.3rem;
-  bottom: 0.3rem;
+  top: 0.4rem;
+  bottom: 0.5rem;
   background: #db1100;
   content: "";
   display: block;
@@ -415,7 +481,7 @@ ul li, ol li {
 
 .content--form-wrapper--block h2 {
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
   margin: 0;
 }
 
@@ -481,7 +547,7 @@ input[type="text"] {
   padding-left: 9px;
 }
 
-.infobutton::after {
+.info-button::after {
   content: "\2139";
   display: inline-block;
   font-size: 1.2rem;
@@ -490,7 +556,7 @@ input[type="text"] {
   cursor: pointer;
 }
 
-.tooltipcontainer {
+.tooltip-container {
   display: none;
 }
 
@@ -507,15 +573,17 @@ input[type="text"] {
   display: table-cell;
 }
 
-.tooltip .closebutton {
+.tooltip .close-button {
   display: table-cell;
-  padding: 0 15px;
+  padding: 0 5px;
+  width: 15px;
   cursor: pointer;
 }
 
-.tooltip .closebutton::after {
+.tooltip .close-button:after {
   content: "x";
   font-weight: bolder;
+  color: #da0011;
 }
 
 .tooltip-text-helper, .help-inline {
@@ -792,43 +860,99 @@ img {
   display: flex;
 }
 
+/* .accordion {
+    width: 100%;
+    margin: 1rem 0 0;
+    border: 1px solid #d7d8d6;
+    padding: 1rem;
+    display: table;
+    button {
+        display: table-cell;
+        width: 100%;
+        text-decoration: none;
+        color: #333;
+        cursor: pointer;
+    }
+    span.accordion-link {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    span.chevron-accordion {
+        display: table-cell;
+        vertical-align: middle;
+        width: 30px;
+        padding: 0 5px;
+        transform: rotate(90deg);
+    }
+    .chevron-accordion:after {
+        content: "\00BB";
+        color: #333;
+        font-size: 2rem;
+        
+        @media (min-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+    &:focus, &:focus-within, &:hover {
+        background-color: #e3e6e8;
+    }
+} */
 .accordion {
   width: 100%;
   margin: 1rem 0 0;
   border: 1px solid #d7d8d6;
   padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
 }
 
-.accordion a {
-  display: table;
+.accordion button {
+  padding: 0;
   width: 100%;
   text-decoration: none;
+  background: none;
+  border: none;
+  margin: 0;
   color: #333;
+  cursor: pointer;
 }
 
-.accordion span.accordion-link {
-  display: table-cell;
+.accordion button .accordion-link {
+  text-align: left;
   vertical-align: middle;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 
 .accordion span.chevron-accordion {
-  display: table-cell;
-  vertical-align: middle;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   width: 30px;
-  padding: 0 5px;
+  padding: 0 10px;
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
+  cursor: pointer;
 }
 
-.accordion .chevron-accordion:after {
-  content: "\00BB";
+.accordion span.chevron-accordion::after {
+  content: "\203A";
   color: #333;
+  color: #db1100;
   font-size: 2rem;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
-  .accordion .chevron-accordion:after {
+  .accordion span.chevron-accordion::after {
     font-size: 1.5rem;
   }
 }
@@ -841,9 +965,8 @@ img {
   display: none;
 }
 
-.tnc {
+.accordion-content {
   color: #333;
-  border: 1px solid #d7d8d6;
   background-color: #f5f6f7;
   padding: 1rem;
 }

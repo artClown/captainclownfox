@@ -182,7 +182,7 @@ ul li, ol li {
     }    
 }
 
-.sectionHeader {
+.section-header {
     // border-left: 4px solid #db1100;
     // text-align: left;
     padding-left: 15px;
@@ -195,7 +195,7 @@ ul li, ol li {
     position: relative;
 }
 
-.sectionHeader::after {
+.section-header::after {
     right: auto;
     left: -5px;
     top: 0.3rem;

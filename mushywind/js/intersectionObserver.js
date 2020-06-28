@@ -1,34 +1,37 @@
-const imageWatcher = new IntersectionObserver((entries, imgWatcher) => {
-    entries.forEach((entry) => {
-        if(entry.isIntersecting){
-            const rowImage = entry.target;
-            rowImage.src = rowImage.dataset.src;
+"use strict";
+var imageWatcher = new IntersectionObserver(function (entries, imgWatcher) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            var rowImage = entry.target,
+                srcImage = rowImage.getAttribute('data-src');
+            rowImage.src = srcImage;
             imgWatcher.unobserve(rowImage);
         }
     });
 });
 
-
-const qfObs = new IntersectionObserver((entries) => {
-    const qF = document.querySelector('#quickFill');
-    entries.forEach((entry) => {
-        if(entry.isIntersecting){
-            const rowImage = entry.target;
-            rowImage.src = rowImage.dataset.src;
+var qfObs = new IntersectionObserver(function (entries) {
+    var qF = document.querySelector('#quick-fill');
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            var rowImage = entry.target,
+                srcImage = rowImage.getAttribute('data-src');
+            rowImage.src = srcImage;
             qF.style.display = 'none';
-        }
-        else {
+        } else {
             qF.style.display = 'block';
         }
     });
 });
 
+var frm = (document.querySelector('#form'));
+var imgArr = (document.querySelectorAll('img.row-load'));
 
-const frm = (document.querySelector('#form'));
-const imgArr = (document.querySelectorAll('img.row-load'));
-
+if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+}
 
 qfObs.observe(frm);
-imgArr.forEach((v) => {
+imgArr.forEach(function (v) {
     imageWatcher.observe(v);
 });

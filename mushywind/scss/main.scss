@@ -1,13 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=PT+Sans&family=Roboto:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=PT+Sans&family=Roboto&display=swap');
-
 // ? UTILITY 
 * {
     box-sizing: border-box;
-    // font-family: 'Roboto', sans-serif;
-    // font-family: 'Open Sans', sans-serif;
     font-family: Arial, Helvetica, sans-serif;
-    // font-family: 'PT Sans', sans-serif;
     line-height: 1.5;
 }
 
@@ -27,6 +21,7 @@ html, body {
 
 .wd-100 {
     width: 100% !important;
+    align-self: center;
 }
 
 .table-wrapper {
@@ -68,7 +63,6 @@ ul, ol {
     padding: 0 !important;
 }
 
-
 .pd-10 {
     padding: 10px !important;
 }
@@ -76,8 +70,6 @@ ul, ol {
 .pd-l-0 {
     padding-left: 0 !important;
 }
-
-
 
 .show-sm, .show-md, .show-lg, .show-xl {
     display: none;
@@ -123,17 +115,15 @@ ul, ol {
     }    
 }
 
-
-
 // ? UTILITY
-.quickFill {
+.quick-fill {
     display: block;
     visibility: visible;
     opacity: 1;
     transition: opacity 0.3s, visibility 0.3s;
     position: fixed;
-    right: 25px;
-    bottom: 75px;
+    right: 0px;
+    bottom: 0px;
     background: rgba(219,17,0,0.65);
     font-weight: bolder;
     border-radius: 5px;
@@ -148,7 +138,7 @@ ul, ol {
     }
 }
 
-.qfToggle {
+.qf-toggle {
     display: none;
     visibility: hidden;
     opacity: 0;
@@ -246,20 +236,68 @@ ul, ol {
     vertical-align: middle;
     flex-wrap: wrap;
     flex-direction: row;
+    align-items: flex-start;
+    align-items: stretch;
+    // align-items: center;
     .content--banner-image {
         flex-basis: 100%;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
         @media (min-width: 1024px) {
             & {
                 flex-basis: 75%;
                 padding-right: 20px;
             }
             img {
+                max-width: 100%;
                 height: 100%;
             }
         }
     }
     .content--banner-text {
-        padding: 10px;
+        padding: 0 10px;
+        margin-top: 0;
+        background-color: #3e505d;
+        color: #fff;
+        flex-basis: 100%;
+        @media (min-width: 1024px) {
+            & {
+                flex-basis: 25%;
+            }
+        }
+        h1, h2, p, span {
+            margin: 15px 5px;
+        }
+    }
+}
+
+.content--banner-left {
+    display:flex;
+    width: 100%;
+    vertical-align: middle;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    align-items: stretch;
+    // align-items: center;
+    .content--banner-image {
+        flex-basis: 100%;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        @media (min-width: 1024px) {
+            & {
+                flex-basis: 75%;
+                padding-left: 20px;
+            }
+            img {
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .content--banner-text {
+        padding: 0 10px;
+        margin-top: 0;
         background-color: #3e505d;
         color: #fff;
         flex-basis: 100%;
@@ -295,8 +333,8 @@ ul, ol {
         width: 100%;
         // background-color: #3e505d;
         background: rgba(255,255,255, 0.95);
-        h2, p, span {
-            margin: 15px 15px;
+        h1, h2, p, span {
+            margin: 10px 0px;
             // color: white;
             color: black;
             font-weight: 300;
@@ -316,11 +354,7 @@ ul, ol {
                 padding: 5px;
                 width: 35%;
             }
-            h2 {
-                margin: 15px 5px;
-                color: #333;
-            }
-            p, span {
+            h1, h2, p, span {
                 margin: 15px 5px;
                 color: #333;
             }
@@ -331,7 +365,7 @@ ul, ol {
 
 
 // ? SECTION HEADER 
-.sectionHeader {
+.section-header {
     padding-left: 15px;
     border-left: 5px solid transparent;
     color: #333;
@@ -339,8 +373,8 @@ ul, ol {
     &::after {
         right: auto;
         left: -5px;
-        top: 0.3rem;
-        bottom: 0.3rem;
+        top: 0.4rem;
+        bottom: 0.5rem;
         background: #db1100;
         content: "";
         display: block;
@@ -365,7 +399,7 @@ ul, ol {
     }
     h2 {
         text-align: center;
-        padding: 10px 0;
+        padding: 20px 0;
         margin: 0;
         &::after {
             content: none !important;
@@ -422,51 +456,7 @@ input[type="text"] {
     padding-left:9px;
 }
 
-// .tooltip {
-//     position: relative;
-//     display: inline-block;
-//     color: #333;
-//     border-radius: 5px;
-//     border: 1px solid #999;
-//     font-style: italic;
-//     font-weight: 200;
-//     font-size: 1em;
-//     margin-left: 5px;
-//     padding: 0 5px;
-//     cursor: pointer;
-//     .tooltip-text {
-//         visibility: hidden;
-//         width: 200px;
-//         background-color: rgba(62,80,93, 0.95);
-//         color: #fff;
-//         font-weight: 300;
-//         font-style: normal;
-//         font-size: 1rem;
-//         text-align: center;
-//         border-radius: 5px;
-//         padding: 5px;
-//         position: absolute;
-//         z-index: 1;
-//         bottom: 150%;
-//         left: 175%;
-//         margin-left: -60px;
-//         &:after {
-//             content: "";
-//             position: absolute;
-//             top: 100%;
-//             left: 10%;
-//             margin-left: -5px;
-//             border-width: 5px;
-//             border-style: solid;
-//             border-color: black transparent transparent transparent;
-//         }
-//     }
-//     &:hover .tooltip-text {
-//         visibility: visible;
-//     }
-// }
-
-.infobutton::after {
+.info-button::after {
     content: "\2139";
     display: inline-block;
     font-size: 1.2rem;
@@ -475,7 +465,7 @@ input[type="text"] {
     cursor: pointer;
 }
 
-.tooltipcontainer {
+.tooltip-container {
     display: none;
 }
 
@@ -489,15 +479,16 @@ input[type="text"] {
     .tooltip-text {
         display: table-cell;
     }
-    .closebutton {
+    .close-button {
         display: table-cell;
-        padding: 0 15px;
+        padding: 0 5px;
+        width:15px;
         cursor: pointer;
-        &::after {
+        &:after {
             content: "x";
             // font-size: 1.5rem;
             font-weight: bolder;
-            // color: red;
+            color: #da0011;
         }
     }
 }
@@ -637,6 +628,7 @@ input[type="text"] {
                 flex-wrap: wrap;
                 align-items: flex-start;
                 align-items: stretch;
+                // align-items: center;
                 padding: 0;
                 p {
                     padding: 20px;
@@ -733,16 +725,18 @@ img {
 }
 
 // ? ACCORDION
-.accordion {
+/* .accordion {
     width: 100%;
     margin: 1rem 0 0;
     border: 1px solid #d7d8d6;
     padding: 1rem;
-    a {
-        display: table;
+    display: table;
+    button {
+        display: table-cell;
         width: 100%;
         text-decoration: none;
         color: #333;
+        cursor: pointer;
     }
     span.accordion-link {
         display: table-cell;
@@ -767,15 +761,61 @@ img {
     &:focus, &:focus-within, &:hover {
         background-color: #e3e6e8;
     }
+} */
+
+.accordion {
+    width: 100%;
+    margin: 1rem 0 0;
+    border: 1px solid #d7d8d6;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    button {
+        padding: 0;
+        width: 100%;
+        text-decoration: none;
+        background: none;
+        border: none;
+        margin: 0;
+        color: #333;
+        cursor: pointer;
+        .accordion-link {
+            text-align: left;
+            vertical-align: middle;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+    }
+    span.chevron-accordion {
+        align-self: center;
+        width: 30px;
+        padding: 0 10px;
+        transform: rotate(90deg);
+        cursor: pointer;
+        &::after {
+            content: "\203A";
+            color: #333;
+            color: #db1100;
+            font-size: 2rem;
+            margin: 0;
+            @media (min-width: 768px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    &:focus, &:focus-within, &:hover {
+        background-color: #e3e6e8;
+    }
 }
 
 .inactive {
     display:none;
 }
 
-.tnc {
+.accordion-content {
     color: #333;
-    border: 1px solid #d7d8d6;
+    // border: 1px solid #d7d8d6;
     background-color: #f5f6f7;
     padding: 1rem;
 }
