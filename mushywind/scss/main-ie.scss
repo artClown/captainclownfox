@@ -513,10 +513,14 @@ input[type="text"] {
         display: block;
         & > * {
             float: left;
+            padding-right: 0px;
             &::after {
                 content: "";
                 clear: both;
                 display: table;
+            }
+            @media (min-width:$b-md) {
+                padding-right: 20px;
             }
         }
         .pd-t-25 {

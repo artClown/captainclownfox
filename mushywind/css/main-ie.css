@@ -562,12 +562,19 @@ input[type="text"] {
 
 .content--banner-support .content--banner-support-content > * {
   float: left;
+  padding-right: 0px;
 }
 
 .content--banner-support .content--banner-support-content > *::after {
   content: "";
   clear: both;
   display: table;
+}
+
+@media (min-width: 768px) {
+  .content--banner-support .content--banner-support-content > * {
+    padding-right: 20px;
+  }
 }
 
 .content--banner-support .content--banner-support-content .pd-t-25 {
