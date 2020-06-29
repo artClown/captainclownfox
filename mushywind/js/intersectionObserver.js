@@ -29,13 +29,14 @@ var qfPosMod = new IntersectionObserver(function(entries) {
     var footerHeight = document.getElementById('footer-wrapper').offsetHeight;
     entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-            console.log('intersecting');
-            qF.style.bottom = footerHeight + 'px';
+            
+                qF.style.bottom = footerHeight - 1 + 'px';
+            
         } else {
             qF.style.bottom = 0;
         }
     });
-});
+}, options);
 
 var frm = (document.querySelector('#form'));
 var imgArr = (document.querySelectorAll('img.row-load'));
@@ -45,8 +46,14 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach;
 }
 
+var options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: [0.0, 0.75]
+};
+
 qfObs.observe(frm);
-qfPosMod.observe(ftr);
+qfPosMod.observe(ftr, options);
 imgArr.forEach(function (v) {
     imageWatcher.observe(v);
 });
