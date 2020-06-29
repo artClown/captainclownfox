@@ -115,8 +115,8 @@ img {
 .section-header::after {
   right: auto;
   left: -5px;
-  top: 0.7rem;
-  bottom: 0.7rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
   background: #db1100;
   content: "";
   display: block;
