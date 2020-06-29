@@ -71,7 +71,7 @@ img {
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 620px) {
   .border-grey {
     margin: 10px 20px 10px 10px;
   }
@@ -141,7 +141,7 @@ img {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 620px) {
   .show-md {
     display: block;
   }
@@ -335,7 +335,7 @@ ul.progress--item li, .progress--bar-wrapper li {
   padding: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 620px) {
   .content--form-wrapper {
     padding: 30px 20px;
   }
@@ -353,7 +353,7 @@ ul.progress--item li, .progress--bar-wrapper li {
   padding: 10px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 620px) {
   .content--form-wrapper .form-group {
     padding: 20px;
   }
@@ -571,7 +571,7 @@ input[type="text"] {
   display: table;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 620px) {
   .content--banner-support .content--banner-support-content > * {
     padding-right: 20px;
   }
@@ -636,7 +636,7 @@ input[type="text"] {
   display: flex;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 620px) {
   .card-sub-container {
     padding: 10px 20px 10px 0;
   }
@@ -781,7 +781,7 @@ input[type="text"] {
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 620px) {
   .tx-left {
     text-align: left;
   }
@@ -825,7 +825,7 @@ table tr:last-child {
   border-bottom: 1px solid #999;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 621px) {
   table thead {
     display: none;
     border: none;
