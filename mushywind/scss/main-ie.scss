@@ -172,19 +172,19 @@ img {
     opacity: 1;
     transition: opacity 0.3s, visibility 0.3s;
     position: fixed;
-    right: $s-0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: $s-0;
-    background: $red-rgba-brand;
+    background: $oxford-blue-transparent;
     font-weight: bolder;
-    border-radius: $s-5;
     z-index: 99;
-    padding: $s-5;
+    padding: $s-5 $s-25;
     a {
         text-decoration: none;
         color: $white;
     }
     &:hover {
-        background: $red-brand;    
+        background: $oxford-blue;    
     }
 }
 
@@ -658,7 +658,7 @@ input[type="text"] {
 
 // ? FOOTER
 .footer-wrapper {    
-    margin: 30px auto 0;
+    margin: 50px auto 0;
     background-color: #000;
     display: flex;
     width: 100% !important;
@@ -700,13 +700,13 @@ table {
     table-layout: fixed;
     th {
         padding: 10px 0;
-        border: 1px solid $grey-30;
+        border: 1px solid $grey-50;
         background-color: $grey-70;
     }
     td {
         padding: 5px;
-        border-left: 1px solid $grey-30;
-        border-right: 1px solid $grey-30;
+        border-left: 1px solid $grey-50;
+        border-right: 1px solid $grey-50;
     }
     tr {
         &:nth-child(odd) {
@@ -739,16 +739,16 @@ table {
                 background-color: $grey-90;
                 &:nth-child(odd), &:nth-child(even) {
                     & td:nth-child(odd){
-                        background-color: $grey-70;
+                        background-color: $grey-120;
                     }
                     & td:nth-child(odd)::before{
-                        background-color: $grey-60;
-                    }
-                    & td:nth-child(even){
                         background-color: $grey-80;
                     }
+                    & td:nth-child(even){
+                        background-color: $white;
+                    }
                     & td:nth-child(even)::before{
-                        background-color: $grey-70;
+                        background-color: $grey-120;
                     }
                 }
             }
@@ -756,6 +756,8 @@ table {
                 display: block;
                 position: relative;
                 padding: 10px 10px 10px 45%;
+                border: 1px solid $grey-70;
+                border-collapse: collapse;
             }
             td::before {
                 content: attr(data-header);
@@ -767,6 +769,8 @@ table {
                 left: 0;
                 width: 35%;
                 vertical-align: top;
+                // border: 1px solid red;
+                // border-collapse: collapse;
             }
             
             .tx-left, .tx-center, .tx-right {
