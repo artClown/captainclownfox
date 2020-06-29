@@ -109,8 +109,8 @@ img {
     &::after {
         right: auto;
         left: -5px;
-        top: 0.5rem;
-        bottom: 0.5rem;
+        top: 0.3em;
+        bottom: 0.4em;
         background: $red-brand;
         content: "";
         display: block;
@@ -136,12 +136,37 @@ img {
     }
 }
 
+.pd-t-sm-20 {
+    padding-top: 20px;
+}
+.pd-r-sm-20 {
+    padding-right: 20px;
+}
+.pd-b-sm-20 {
+    padding-bottom: 20px;
+}
+.pd-l-sm-20 {
+    padding-left: 20px;
+}
+
 @media (min-width: $b-md) {
     .show-md {
         display: block;
     }
     .hide-md {
         display: none;
+    }
+    .pd-t-md-20 {
+        padding-top: 20px;
+    }
+    .pd-r-md-20 {
+        padding-right: 20px;
+    }
+    .pd-b-md-20 {
+        padding-bottom: 20px;
+    }
+    .pd-l-md-20 {
+        padding-left: 20px;
     }
 }
 
@@ -152,6 +177,18 @@ img {
     .hide-lg {
         display: none;
     }
+    .pd-t-lg-20 {
+        padding-top: 20px;
+    }
+    .pd-r-lg-20 {
+        padding-right: 20px;
+    }
+    .pd-b-lg-20 {
+        padding-bottom: 20px;
+    }
+    .pd-l-lg-20 {
+        padding-left: 20px;
+    }
 }
 
 @media (min-width: $b-xl) {
@@ -160,7 +197,19 @@ img {
     }   
     .hide-xl {
         display: none;
-    }    
+    }
+    .pd-t-xl-20 {
+        padding-top: 20px;
+    }
+    .pd-r-xl-20 {
+        padding-right: 20px;
+    }
+    .pd-b-xl-20 {
+        padding-bottom: 20px;
+    }
+    .pd-l-xl-20 {
+        padding-left: 20px;
+    }
 }
 
 .quick-fill {
@@ -283,9 +332,9 @@ ul.progress--item, .progress--bar-wrapper {
                 background: $white;
                 top: 50%;
                 transform: translateY(-50%);
-                left: 5%;
+                left: 3%;
                 padding: $s-20 $s-5;
-                width: 35%;
+                width: 40%;
             }
             h1, h2, h3, h4, h5, h6, p, span {
                 margin: $s-15;
@@ -541,6 +590,7 @@ input[type="text"] {
         & .row {
             display: block;
             float: left;
+            padding-top: 25px;
         }
     }
 }
@@ -565,11 +615,11 @@ input[type="text"] {
 }
 
 .card-sub-container {
-    padding: 10px 0;
+    // padding: 10px 0;
     display: flex;
-    @media (min-width: $b-md) {
+    /* @media (min-width: $b-md) {
         padding: 10px 20px 10px 0;
-    }
+    } */
 }
 
 .card-col {
@@ -700,12 +750,12 @@ table {
     padding: 0;
     table-layout: fixed;
     th {
-        padding: 10px 0;
+        padding: 15px 0;
         border: 1px solid $grey-50;
         background-color: $grey-70;
     }
     td {
-        padding: 5px;
+        padding: 10px;
         border-left: 1px solid $grey-50;
         border-right: 1px solid $grey-50;
     }

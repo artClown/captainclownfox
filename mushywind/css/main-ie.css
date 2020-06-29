@@ -116,8 +116,8 @@ img {
 .section-header::after {
   right: auto;
   left: -5px;
-  top: 0.5rem;
-  bottom: 0.5rem;
+  top: 0.3em;
+  bottom: 0.4em;
   background: #db1100;
   content: "";
   display: block;
@@ -142,12 +142,40 @@ img {
   }
 }
 
+.pd-t-sm-20 {
+  padding-top: 20px;
+}
+
+.pd-r-sm-20 {
+  padding-right: 20px;
+}
+
+.pd-b-sm-20 {
+  padding-bottom: 20px;
+}
+
+.pd-l-sm-20 {
+  padding-left: 20px;
+}
+
 @media (min-width: 620px) {
   .show-md {
     display: block;
   }
   .hide-md {
     display: none;
+  }
+  .pd-t-md-20 {
+    padding-top: 20px;
+  }
+  .pd-r-md-20 {
+    padding-right: 20px;
+  }
+  .pd-b-md-20 {
+    padding-bottom: 20px;
+  }
+  .pd-l-md-20 {
+    padding-left: 20px;
   }
 }
 
@@ -158,6 +186,18 @@ img {
   .hide-lg {
     display: none;
   }
+  .pd-t-lg-20 {
+    padding-top: 20px;
+  }
+  .pd-r-lg-20 {
+    padding-right: 20px;
+  }
+  .pd-b-lg-20 {
+    padding-bottom: 20px;
+  }
+  .pd-l-lg-20 {
+    padding-left: 20px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -166,6 +206,18 @@ img {
   }
   .hide-xl {
     display: none;
+  }
+  .pd-t-xl-20 {
+    padding-top: 20px;
+  }
+  .pd-r-xl-20 {
+    padding-right: 20px;
+  }
+  .pd-b-xl-20 {
+    padding-bottom: 20px;
+  }
+  .pd-l-xl-20 {
+    padding-left: 20px;
   }
 }
 
@@ -303,9 +355,9 @@ ul.progress--item li, .progress--bar-wrapper li {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-    left: 5%;
+    left: 3%;
     padding: 20px 5px;
-    width: 35%;
+    width: 40%;
   }
   .content--banner-overlay .content--banner-text h1, .content--banner-overlay .content--banner-text h2, .content--banner-overlay .content--banner-text h3, .content--banner-overlay .content--banner-text h4, .content--banner-overlay .content--banner-text h5, .content--banner-overlay .content--banner-text h6, .content--banner-overlay .content--banner-text p, .content--banner-overlay .content--banner-text span {
     margin: 15px;
@@ -599,6 +651,7 @@ input[type="text"] {
 .content--other .container-fluid .row {
   display: block;
   float: left;
+  padding-top: 25px;
 }
 
 .content {
@@ -631,16 +684,12 @@ input[type="text"] {
 }
 
 .card-sub-container {
-  padding: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-@media (min-width: 620px) {
-  .card-sub-container {
-    padding: 10px 20px 10px 0;
-  }
+  /* @media (min-width: $b-md) {
+        padding: 10px 20px 10px 0;
+    } */
 }
 
 .card-col {
@@ -803,13 +852,13 @@ table {
 }
 
 table th {
-  padding: 10px 0;
+  padding: 15px 0;
   border: 1px solid #bbb;
   background-color: #ddd;
 }
 
 table td {
-  padding: 5px;
+  padding: 10px;
   border-left: 1px solid #bbb;
   border-right: 1px solid #bbb;
 }
