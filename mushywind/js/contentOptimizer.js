@@ -18,14 +18,13 @@ function isInArray(value, array) {
 
 // switch on off
 function scElement($els){
+    console.log('status is', (($('.abtest').is(':visible'))));
     $els.each(function(){
         var $this = $(this),
             $img = $this.attr('data-img-src');
             $imgSrcSet = $this.attr('data-img-srcset')
         if ($this.is('img')) {
-            // console.log(abTest);
-            // console.log(!$this.hasClass('scAbTestOff'));
-            if (!$this.hasClass('scAbTestOff')) {
+            if(!($('.abtest').is(':visible'))){
                 console.log('not');
                 if (!$imgSrcSet) {
                     $this.attr("src", $img);
@@ -67,18 +66,21 @@ function abTestSet(){
     var $val = scToArray();
     if (typeof $identifier != 'undefined') {
         if (jQuery.inArray($identifier, $val) != -1) {
+            // console.log('status is', (($('.abtest').is(':visible'))));
             var $el = "[data-selective-content=" + $identifier + "]";
             var $these = $($el);
             scElement($these);
             var $this = $($el).find('[data-ab-test]');
             abTester($this.length);
         } else {
+            // console.log('status is', (($('.abtest').is(':visible'))));
             var $these = $('[data-selective-content="generic"]');
             scElement($these);
             var $this = $($el).find('[data-ab-test]');
             abTester($this.length);
         }
     } else {
+        // console.log('status is', (($('.abtest').is(':visible'))));
         var $these = $('[data-selective-content="generic"]');
         scElement($these);
         var $this = $($el).find('[data-ab-test]');
