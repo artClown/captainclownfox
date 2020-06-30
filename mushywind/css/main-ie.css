@@ -19,7 +19,7 @@ html, body {
   outline: none !important;
 }
 
-.selectiveContent, .inactive {
+.selectiveContent, .inactive, .abtest, .hidden-parameter {
   display: none;
 }
 
@@ -140,6 +140,10 @@ img {
   .hide-sm {
     display: none;
   }
+}
+
+.float-left {
+  float: left;
 }
 
 .pd-t-sm-20 {
@@ -386,6 +390,8 @@ ul.progress--item li, .progress--bar-wrapper li {
   background-color: #f5f6f7;
   margin-top: 25px;
   padding: 20px;
+  display: inline-block;
+  position: relative;
 }
 
 @media (min-width: 620px) {
@@ -646,6 +652,9 @@ input[type="text"] {
 
 .content--other {
   margin-top: 35px;
+  background-color: #fff;
+  display: block;
+  position: relative;
 }
 
 .content--other .container-fluid .row {

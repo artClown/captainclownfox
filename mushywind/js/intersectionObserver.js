@@ -38,7 +38,7 @@ var qfPosMod = new IntersectionObserver(function(entries) {
     });
 }, options);
 
-var frm = (document.querySelector('#form'));
+var frm = (document.querySelector('#form-wrapper'));
 var imgArr = (document.querySelectorAll('img.row-load'));
 var ftr = (document.querySelector('#footer-wrapper'));
 

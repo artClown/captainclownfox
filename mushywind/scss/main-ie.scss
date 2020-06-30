@@ -21,7 +21,7 @@ html, body {
     outline: none !important;
 }
 
-.selectiveContent, .inactive {
+.selectiveContent, .inactive, .abtest, .hidden-parameter {
     display: none;
 }
 
@@ -99,7 +99,6 @@ img {
 .mg-t-10 {
     margin-top: $s-10;
 }
-
 .section-header {
     margin-top: 25px;
     padding-left: 15px;
@@ -134,6 +133,10 @@ img {
     .hide-sm {
         display: none;
     }
+}
+
+.float-left {
+    float: left;
 }
 
 .pd-t-sm-20 {
@@ -254,7 +257,6 @@ img {
     color: $white;
 }
 
-
 // ? HEADER
 .header-wrapper {
     width: 100%;
@@ -344,7 +346,6 @@ ul.progress--item, .progress--bar-wrapper {
     }
 }
 
-
 // ? Banner Side by Side
 .content--banner {
     border: 1px solid $grey-70;
@@ -365,6 +366,8 @@ ul.progress--item, .progress--bar-wrapper {
     background-color: $grey-130;
     margin-top: $s-25;
     padding: $s-20;
+    display: inline-block;
+    position: relative;
     @media (min-width: $b-md) {
         padding: $s-30 $s-20;
     }
@@ -586,6 +589,10 @@ input[type="text"] {
 // ? Other Content
 .content--other {
     margin-top: 35px;
+    background-color: $white;
+    display: block;
+    position: relative;
+    // float: left;
     .container-fluid {
         & .row {
             display: block;
@@ -705,7 +712,6 @@ input[type="text"] {
     height: 20vh;
     overflow-y: auto;
 }
-
 
 // ? FOOTER
 .footer-wrapper {    
@@ -831,8 +837,6 @@ table {
     }
 }
 
-
-
 .top {
     vertical-align: top;
 }
@@ -844,7 +848,6 @@ table {
 .bottom {
     vertical-align: bottom;
 }
-
 
 .teal {
     background-color: teal;
@@ -866,8 +869,6 @@ table {
     background: greenyellow;
     // color: white;
 }
-
-
 .tw-2 {
     width: 2%;
 }
