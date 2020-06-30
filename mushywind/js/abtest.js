@@ -11,6 +11,7 @@ function isInArray(value, array) {
 (function () {
     var abTestParameter = getUrlVars()["abtest"];
     if (abTestParameter == "active") {        
+        // check if parent visible
         abProc();
     }
 })();
@@ -24,8 +25,20 @@ function abProc() {
         var len = ($($el).find('[data-ab-test]').length) / $elLength;
         var elemId = generateRandomInt(1, len);
         var elem = "[data-ab-test=" + elemId + "]";
-        console.log($el, elem);
+        // console.log($el, elem);
         $($el).find(elem).show();
+
+        // if contains image, transfer the image source!
+        if ($($el).find(elem).find('img').length) {
+            var $this = $($el).find(elem).find('img');
+            var srcImage = $this.attr('data-src');
+            $this.attr('src', srcImage);
+            // if found and another selectiveContent image is present next to the element, then turn it off - the selectiveContent should be placed right after the abtest-wrapper div
+            console.log($('.scAbTestOff'));
+            $('.scAbTestOff').attr('src', '');
+            $('.scAbTestOff').css('display', 'none');
+            $('.scAbTestOff').hide();
+        }
 
         // additional auto-fill input field
         var inpId = "#hidden-" + (i + 1);

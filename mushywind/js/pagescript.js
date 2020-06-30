@@ -1,4 +1,3 @@
 (function () {
-    selectiveContent();
     progressBar();
 })();

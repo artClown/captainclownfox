@@ -89,7 +89,36 @@
             <div class="selectiveContent" data-selective-content="rightwhite">
                 <div class="content--banner csm-12 clearfix">        
                     <div class="content--banner-image csm-12 cmd-6">
-                        <img alt="banner-c" class="selectiveContent" data-selective-content="rightwhite" data-img-src="./images/rightwhite-w.jpg">
+                        <div class="abtest-wrapper" data-ab-test-set="set-D">
+                            <div class="abtest" data-ab-test="1" >
+                                <img data-src="./images/dynamic/barley-5351552_640.jpg" alt="">
+                            </div>
+                            <div class="abtest" data-ab-test="2" >
+                                <img data-src="./images/dynamic/black-4906807_640.jpg" alt="">
+                            </div>
+                            <div class="abtest" data-ab-test="3" >
+                                <img data-src="./images/dynamic/eastern-grey-kangaroo-5348449_640.jpg" alt="">
+                            </div>
+                            <div class="abtest" data-ab-test="4" >
+                                <img data-src="./images/dynamic/luka-5249892_640.jpg" alt="">
+                            </div>
+                            <div class="abtest" data-ab-test="5" >
+                                <img data-src="./images/dynamic/pier-5086290_640.jpg" alt="">
+                            </div>
+                            <div class="abtest" data-ab-test="6" >
+                                <img data-src="./images/dynamic/poppy-5351554_640.jpg" alt="">
+                            </div>
+                            <div class="abtest" data-ab-test="7" >
+                                <img data-src="./images/dynamic/taking-5340011_640.jpg" alt="">
+                            </div>
+                            <div class="abtest" data-ab-test="8" >
+                                <img data-src="./images/dynamic/the-night-5338228_640.jpg" alt="">
+                            </div>
+                            <div class="abtest" data-ab-test="9" >
+                                <img data-src="./images/dynamic/wind-turbine-5163993_640.jpg" alt="">
+                            </div>
+                        </div>
+                        <img alt="banner-c" class="selectiveContent scAbTestOff" data-selective-content="rightwhite" data-img-src="./images/rightwhite-w.jpg">
                     </div>
                     <div class="content--banner-text csm-12 cmd-6">
                         <div data-selective-content="rightwhite" class="selectiveContent">
@@ -229,12 +258,13 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex expedita tempora voluptates odit! Quod, illo saepe quo provident maiores velit expedita, dolores, id quia ipsa odio porro vitae nesciunt quae.</p>
                             </div>
                             <div class="csm-12 cmd-6 pd-10 float-left">
-                                <img src="https://dummyimage.com/600x400/bf07bf/ffffff&text=Set+C+Version+1" alt="">
+                                <img data-src="https://dummyimage.com/600x400/bf07bf/ffffff&text=Set+C+Version+1" alt="">
+                                <!-- <img alt="banner-c" class="selectiveContent" data-selective-content="rightwhite" data-src="./images/rightwhite-w.jpg"> -->
                             </div>
                         </div>
                         <div class="abtest" data-ab-test="2">
                             <div class="csm-12 cmd-4 pd-10 float-left">
-                                <img src="https://dummyimage.com/600x400/1707bf/ffffff&text=Set+C+Version+2" alt="">
+                                <img data-src="https://dummyimage.com/600x400/1707bf/ffffff&text=Set+C+Version+2" alt="">
                             </div>
                             <div class="csm-12 cmd-8 pd-10 float-left">
                                 <p class="tx-150">AB Test - Set C Version 2 - Image Left Text Right</p>
@@ -244,7 +274,7 @@
                         </div>
                         <div class="abtest" data-ab-test="3">
                             <div class="csm-12 pd-10 float-left">
-                                <img src="https://dummyimage.com/600x100/47a7bf/ffffff&text=Set+C+Version+3" alt="">
+                                <img data-src="https://dummyimage.com/600x100/47a7bf/ffffff&text=Set+C+Version+3" alt="">
                             </div>
                             <div class="csm-12 pd-10 float-left">
                                 <p class="tx-150">AB Test - Set C Version 3 - Image Top Text Bottom</p>
@@ -259,7 +289,7 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium architecto iste, unde placeat ullam distinctio beatae enim blanditiis? Dolores quia odit voluptate dolorum amet doloremque aliquam. Velit, autem at.</p>
                             </div>
                             <div class="csm-12 pd-10 float-left">
-                                <img src="https://dummyimage.com/600x100/a1d13a/ffffff&text=Set+C+Version+4" alt="">
+                                <img data-src="https://dummyimage.com/600x100/a1d13a/ffffff&text=Set+C+Version+4" alt="">
                             </div>
                         </div>
                     </div>
@@ -647,8 +677,7 @@
     <![endif]-->
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/modules/getUrlVars.js"></script>
-    <script src="./js/selectivecontent.min.js"></script>
-    <script src="./js/abtest.js"></script>
+    <!-- <script src="./js/selectivecontent.js"></script> -->
     <script src="./js/progressBar.js"></script>
     <script src="./js/pagescript.js"></script>
     <script src="./js/inputAnimation.js"></script>
@@ -656,5 +685,7 @@
     <script src="./js/validate.js"></script>
     <script src="./js/ioPolyfill.js"></script>
     <script src="./js/intersectionObserver2.js?v=1.0.1"></script>
+    <!-- <script src="./js/abtest.js"></script> -->
+    <script src="./js/contentOptimizer.js"></script>
 </body>
 </html>

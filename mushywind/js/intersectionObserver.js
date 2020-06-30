@@ -14,9 +14,6 @@ var qfObs = new IntersectionObserver(function (entries) {
     var qF = document.querySelector('#quick-fill');
     entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-            // var rowImage = entry.target,
-            //     srcImage = rowImage.getAttribute('data-src');
-            // rowImage.src = srcImage;
             qF.style.display = 'none';
         } else {
             qF.style.display = 'block';
